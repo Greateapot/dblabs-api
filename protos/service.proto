@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package dblabs_api;
+
+import "requests.proto";
+import "responses.proto";
+
+option go_package = "greateapot.re/dblabs-api";
+
+service Api {
+    rpc AlterDatabase(AlterDatabaseRequest) returns (OkResponse);
+    rpc CreateDatabase(CreateDatabaseRequest) returns (OkResponse);
+    rpc DropDatabase(DropDatabaseRequest) returns (OkResponse);
+    rpc AlterTable(AlterTableRequest) returns (OkResponse);
+    rpc CreateTable(CreateTableRequest) returns (OkResponse);
+    rpc DropTable(DropTableRequest) returns (OkResponse);
+    rpc RenameTable(RenameTableRequest) returns (OkResponse);
+    rpc TruncateTable(TruncateTableRequest) returns (OkResponse);
+
+    // rpc Delete(DeleteRequest) returns (DeleteResponse);
+    // rpc Update(UpdateRequest) returns (UpdateResponse);
+    // rpc Select(SelectRequest) returns (SelectResponse);
+    // rpc Insert(InsertRequest) returns (InsertResponse);
+}

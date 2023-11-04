@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package dblabs_api;
+
+option go_package = "greateapot.re/dblabs-api";
+
+message ResponseError {
+    int32 code = 1;
+    string message = 2;
+}

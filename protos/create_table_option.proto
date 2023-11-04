@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package dblabs_api;
+
+import "objects.proto";
+import "enums.proto";
+
+option go_package = "greateapot.re/dblabs-api";
+
+message CreateTableOption {
+    CreateTableOptionType type = 1;
+
+    oneof option {
+        Column column = 2;
+        PrimaryKey primary_key = 3;
+        UniqueKey unique_key = 4;
+        ForeignKey foreign_key = 5;
+    }
+}

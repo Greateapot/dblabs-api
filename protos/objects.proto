@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package dblabs_api;
+
+import "data_type.proto";
+import "enums.proto";
+
+option go_package = "greateapot.re/dblabs-api";
+
+message Insert {
+    InsertType type = 1;
+    string after_column_name = 2;
+}
+
+message Column {
+    string column_name = 1;
+    DataType data_type = 2;
+    bool not_null = 3;
+}
+
+message PrimaryKey {
+    repeated string key_parts = 1;
+    string constraint_symbol = 2;
+}
+
+message UniqueKey {
+    repeated string key_parts = 1;
+    string constraint_symbol = 2;
+}
+
+message ForeignKey {
+    repeated string column_names = 1;
+    string parent_table_name = 2;
+    repeated string parent_key_parts = 3;
+    ReferenceOptionType on_delete = 4;
+    ReferenceOptionType on_update = 5;
+    string constraint_symbol = 6;
+}

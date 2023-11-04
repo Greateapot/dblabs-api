@@ -1,0 +1,1 @@
+protoc -Iprotos --dart_out=grpc:dart/lib/src/generated protos/*

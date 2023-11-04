@@ -1,0 +1,76 @@
+syntax = "proto3";
+
+package dblabs_api;
+
+import "objects.proto";
+import "enums.proto";
+
+option go_package = "greateapot.re/dblabs-api";
+
+message AlterTableOption {
+    AlterTableOptionType type = 1;
+
+    oneof option {
+        AddColumn add_column = 2;
+        AddPrimaryKey add_primary_key = 3;
+        AddUniqueKey add_unique_key = 4;
+        AddForeignKey add_foreign_key = 5;
+        Change change = 6;
+        DropColumn drop_column = 7;
+        DropPrimaryKey drop_primary_key = 8;
+        DropForeignKey drop_foreign_key = 9;
+        Modify modify = 10;
+        Order order = 11;
+        RenameColumn rename_column = 12;
+        Rename rename = 13;
+        DropKey drop_key = 14;
+    }
+}
+
+message AddColumn {
+    Column column = 1;
+    Insert insert = 2;
+}
+
+message AddPrimaryKey {
+    PrimaryKey primary_key = 1;
+}
+message AddUniqueKey {
+    UniqueKey unique_key = 1;
+}
+message AddForeignKey {
+    ForeignKey foreign_key = 1;
+}
+
+message Change {
+    string old_column_name = 1;
+    Column new_column = 2;
+    Insert insert = 3;
+}
+
+message DropColumn {
+    string column_name = 1;
+}
+message DropPrimaryKey {}
+message DropForeignKey {
+    // constraint
+    string foreign_key_symbol = 1;
+}
+message Modify {
+    Column column = 1;
+    Insert insert = 2;
+}
+message Order {
+    repeated string column_names = 1;
+}
+message RenameColumn {
+    string old_column_name = 1;
+    string new_column_name = 2;
+}
+message Rename {
+    string new_table_name = 1;
+}
+
+message DropKey {
+    string key_name = 1;
+}

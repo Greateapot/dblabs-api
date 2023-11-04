@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+package dblabs_api;
+
+option go_package = "greateapot.re/dblabs-api";
+
+enum ReadOnly {
+    ENABLED = 0;
+    DISABLED = 1;
+}
+
+enum InsertType {
+    FIRST = 0;
+    AFTER = 1;
+}
+
+enum AlterTableOptionType {
+    ADD_COLUMN = 0;
+    ADD_PRIMARY_KEY = 1;
+    ADD_UNIQUE_KEY = 2;
+    ADD_FOREIGN_KEY = 3;
+    CHANGE = 4;
+    DROP_COLUMN = 5;
+    DROP_PRIMARY_KEY = 6;
+    DROP_FOREIGN_KEY = 7;
+    MODIFY = 8;
+    ORDER = 9;
+    RENAME_COLUMN = 10;
+    RENAME = 11;
+    DROP_KEY = 12;
+}
+
+enum CreateTableOptionType {
+    COLUMN = 0;
+    PRIMARY_KEY = 1;
+    UNIQUE_KEY = 2;
+    FOREIGN_KEY = 3;
+}
+
+enum ReferenceOptionType {
+    RESTRICT = 0;
+    CASCADE = 1;
+    SET_NULL = 2;
+    NO_ACTION = 3;
+    SET_DEFAULT = 4;
+}
+
+enum DataTypeType {
+    INT = 0;
+    SMALLINT = 1;
+    TINYINT = 2;
+    MEDIUMINT = 3;
+    BIGINT = 4;
+    DECIMAL = 5;
+    NUMERIC = 6;
+    FLOAT = 7;
+    DOUBLE = 8;
+    BIT = 9;
+    DATE = 10;
+    DATETIME = 11;
+    TIMESTAMP = 12;
+    TIME = 13;
+    YEAR = 14;
+    CHAR = 15;
+    VARCHAR = 16;
+    BINARY = 17;
+    VARBINARY = 18;
+    BLOB = 19;
+    TEXT = 20;
+    TINYBLOB = 21;
+    TINYTEXT = 22;
+    MEDIUMBLOB = 23;
+    MEDIUMTEXT = 24;
+    LONGBLOB = 25;
+    LONGTEXT = 26;
+    ENUM = 27;
+}

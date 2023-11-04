@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package dblabs_api;
+
+import "enums.proto";
+
+option go_package = "greateapot.re/dblabs-api";
+
+message DataType {
+    DataTypeType type = 1;
+
+    oneof attrs {
+        IntDataTypeAttrs int_attrs = 2;
+        FloatDataTypeAttrs float_attrs = 3;
+        DoubleDataTypeAttrs double_attrs = 4;
+        TimeDataTypeAttrs time_attrs = 5;
+        StringDataTypeAttrs string_attrs = 6;
+        EnumDataTypeAttrs enum_attrs = 7;
+    }
+}
+
+message IntDataTypeAttrs {
+    bool unsigned = 1;
+    bool auto_increment = 2;
+}
+
+message FloatDataTypeAttrs {
+    int32 p = 1;
+}
+
+message DoubleDataTypeAttrs {
+    int32 size = 1;
+    int32 d = 2;
+}
+
+message TimeDataTypeAttrs {
+    int32 fsp = 1;
+}
+
+message StringDataTypeAttrs {
+    int32 size = 1;
+}
+
+message EnumDataTypeAttrs {
+    repeated string values = 1;
+}

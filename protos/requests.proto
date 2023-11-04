@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package dblabs_api;
+
+import "alter_table_option.proto";
+import "create_table_option.proto";
+import "enums.proto";
+
+option go_package = "greateapot.re/dblabs-api";
+
+message AlterDatabaseRequest {
+    string database_name = 1;
+    ReadOnly read_only = 2;
+}
+message CreateDatabaseRequest {
+    string database_name = 1;
+}
+message DropDatabaseRequest {
+    string database_name = 1;
+}
+
+message AlterTableRequest {
+    string table_name = 1;
+    repeated AlterTableOption options = 2;
+}
+message CreateTableRequest {
+    string table_name = 1;
+    repeated CreateTableOption options = 2;
+}
+message DropTableRequest {
+    string table_name = 1;
+}
+
+// message AlterViewRequest {}
+// message CreateViewRequest {}
+// message DropViewRequest {}
+
+message RenameTableRequest {
+    string old_table_name = 1;
+    string new_table_name = 2;
+}
+
+message TruncateTableRequest {
+    string table_name = 1;
+}
