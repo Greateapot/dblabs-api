@@ -40,3 +40,4 @@ message AlterTableOption {
         AlterColumn alter_column = 15;
     }
 }
+

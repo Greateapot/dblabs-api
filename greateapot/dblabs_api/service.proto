@@ -17,8 +17,9 @@ service Api {
     rpc RenameTable(RenameTableRequest) returns (OkResponse);
     rpc TruncateTable(TruncateTableRequest) returns (OkResponse);
 
-    // rpc Delete(DeleteRequest) returns (DeleteResponse);
-    // rpc Update(UpdateRequest) returns (UpdateResponse);
-    // rpc Select(SelectRequest) returns (SelectResponse);
-    // rpc Insert(InsertRequest) returns (InsertResponse);
+    rpc Delete(DeleteRequest) returns (OkResponse);
+    rpc Update(UpdateRequest) returns (OkResponse);
+    rpc Insert(InsertRequest) returns (OkResponse);
+    rpc Select(SelectRequest) returns (TableResponse);
+    rpc Join(JoinRequest) returns (TableResponse);
 }

@@ -11,30 +11,8 @@ message OkResponse {
     ResponseError error = 2;
 }
 
-// // dml
-// message DeleteResponse {
-//     bool ok = 1;
-//     ResponseError error = 3;
-// }
-// message UpdateResponse {
-//     bool ok = 1;
-//     string data = 2;
-//     ResponseError error = 3;
-// }
-// message SelectResponse {
-//     bool ok = 1;
-//     string data = 2;
-//     ResponseError error = 3;
-// }
-// message InsertResponse {
-//     bool ok = 1;
-//     string data = 2;
-//     ResponseError error = 3;
-// }
-
-// // inner join
-// message JoinResponse {
-//     bool ok = 1;
-//     string data = 2;
-//     ResponseError error = 3;
-// }
+message TableResponse {
+    bool ok = 1;
+    string data = 2;
+    ResponseError error = 3;
+}
