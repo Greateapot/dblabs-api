@@ -14,6 +14,11 @@ enum InsertType {
     AFTER = 1;
 }
 
+enum AlterColumnType {
+    SET_DEFAULT_VALUE = 0;
+    DROP_DEFAULT_VALUE = 1;
+}
+
 enum AlterTableOptionType {
     ADD_COLUMN = 0;
     ADD_PRIMARY_KEY = 1;
@@ -28,6 +33,7 @@ enum AlterTableOptionType {
     RENAME_COLUMN = 10;
     RENAME = 11;
     DROP_KEY = 12;
+    ALTER_COLUMN = 13;
 }
 
 enum CreateTableOptionType {
@@ -35,6 +41,8 @@ enum CreateTableOptionType {
     PRIMARY_KEY = 1;
     UNIQUE_KEY = 2;
     FOREIGN_KEY = 3;
+    AS = 4;
+    LIKE = 5;
 }
 
 enum ReferenceOptionType {

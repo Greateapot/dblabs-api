@@ -15,6 +15,8 @@ message CreateTableOption {
         PrimaryKey primary_key = 3;
         UniqueKey unique_key = 4;
         ForeignKey foreign_key = 5;
+        As as = 6;
+        Like like = 7;
     }
 }
 
@@ -35,5 +37,6 @@ message AlterTableOption {
         RenameColumn rename_column = 12;
         Rename rename = 13;
         DropKey drop_key = 14;
+        AlterColumn alter_column = 15;
     }
 }

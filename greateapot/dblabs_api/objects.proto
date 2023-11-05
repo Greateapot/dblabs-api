@@ -4,8 +4,17 @@ package greateapot.dblabs_api;
 
 import "data_type.proto";
 import "enums.proto";
+import "any.proto"; // google.protobuf.Any
 
 option go_package = "greateapot.re/dblabs-api";
+
+message As {
+    string name = 1;
+}
+
+message Like {
+    string name = 1;
+}
 
 message Insert {
     InsertType type = 1;
@@ -16,6 +25,8 @@ message Column {
     string column_name = 1;
     DataType data_type = 2;
     bool not_null = 3;
+    google.protobuf.Any default_value = 4;
+    string comment = 5;
 }
 
 message PrimaryKey {
@@ -83,4 +94,10 @@ message Rename {
 
 message DropKey {
     string key_name = 1;
+}
+
+message AlterColumn {
+    string column_name = 1;
+    AlterColumnType type = 2;
+    google.protobuf.Any new_default_value = 3;
 }
