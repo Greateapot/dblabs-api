@@ -8,7 +8,7 @@ import "enums.proto";
 option go_package = "greateapot.re/dblabs-api";
 
 message CreateTableOption {
-    .dblabs_api.CreateTableOptionType type = 1;
+    CreateTableOptionType type = 1;
 
     oneof option {
         Column column = 2;
@@ -19,7 +19,7 @@ message CreateTableOption {
 }
 
 message AlterTableOption {
-    .dblabs_api.AlterTableOptionType type = 1;
+    AlterTableOptionType type = 1;
 
     oneof option {
         AddColumn add_column = 2;

@@ -9,7 +9,7 @@ option go_package = "greateapot.re/dblabs-api";
 
 message AlterDatabaseRequest {
     string database_name = 1;
-    .dblabs_api.ReadOnly read_only = 2;
+    ReadOnly read_only = 2;
 }
 message CreateDatabaseRequest {
     string database_name = 1;

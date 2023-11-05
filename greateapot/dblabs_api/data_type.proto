@@ -3,13 +3,11 @@ syntax = "proto3";
 package greateapot.dblabs_api;
 
 import "enums.proto";
-import "any.proto";
 
 option go_package = "greateapot.re/dblabs-api";
 
 message DataType {
-    .dblabs_api.DataTypeType type = 1;
-    google.protobuf.Any temp = 99;
+    DataTypeType type = 1;
 
     oneof attrs {
         IntDataTypeAttrs int_attrs = 2;
