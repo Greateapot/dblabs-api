@@ -1,16 +1,15 @@
 syntax = "proto3";
 
-package dblabs_api;
+package greateapot.dblabs_api;
 
-import "alter_table_option.proto";
-import "create_table_option.proto";
+import "options.proto";
 import "enums.proto";
 
 option go_package = "greateapot.re/dblabs-api";
 
 message AlterDatabaseRequest {
     string database_name = 1;
-    ReadOnly read_only = 2;
+    .dblabs_api.ReadOnly read_only = 2;
 }
 message CreateDatabaseRequest {
     string database_name = 1;

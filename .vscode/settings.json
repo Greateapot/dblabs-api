@@ -1,0 +1,9 @@
+{
+    "protoc": {
+        "path": "protoc",
+        "options": [
+            "--proto_path=${workspaceRoot}/dblabs-api/greateapot/dblabs_api",
+            "--proto_path=${workspaceRoot}/dblabs-api/google/protobuf",
+        ]
+    }
+}

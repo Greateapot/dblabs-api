@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package dblabs_api;
+package greateapot.dblabs_api;
 
 import "requests.proto";
 import "responses.proto";

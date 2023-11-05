@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package greateapot.dblabs_api;
+
+import "objects.proto";
+import "enums.proto";
+
+option go_package = "greateapot.re/dblabs-api";
+
+message CreateTableOption {
+    .dblabs_api.CreateTableOptionType type = 1;
+
+    oneof option {
+        Column column = 2;
+        PrimaryKey primary_key = 3;
+        UniqueKey unique_key = 4;
+        ForeignKey foreign_key = 5;
+    }
+}
+
+message AlterTableOption {
+    .dblabs_api.AlterTableOptionType type = 1;
+
+    oneof option {
+        AddColumn add_column = 2;
+        AddPrimaryKey add_primary_key = 3;
+        AddUniqueKey add_unique_key = 4;
+        AddForeignKey add_foreign_key = 5;
+        Change change = 6;
+        DropColumn drop_column = 7;
+        DropPrimaryKey drop_primary_key = 8;
+        DropForeignKey drop_foreign_key = 9;
+        Modify modify = 10;
+        Order order = 11;
+        RenameColumn rename_column = 12;
+        Rename rename = 13;
+        DropKey drop_key = 14;
+    }
+}
