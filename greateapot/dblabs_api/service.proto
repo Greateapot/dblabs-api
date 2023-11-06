@@ -22,4 +22,8 @@ service Api {
     rpc Insert(InsertRequest) returns (OkResponse);
     rpc Select(SelectRequest) returns (TableResponse);
     rpc Join(JoinRequest) returns (TableResponse);
+
+    rpc ShowDatabases(ShowDatabasesRequest) returns (TableResponse);
+    rpc ShowTables(ShowTablesRequest) returns (TableResponse);
+    rpc ShowTableStruct(ShowTableStructRequest) returns (TableResponse);
 }
