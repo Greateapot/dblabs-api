@@ -6,7 +6,7 @@ import "objects.proto";
 import "options.proto";
 import "enums.proto";
 
-option go_package = "greateapot.re/dblabs-api";
+option go_package = "greateapot.re/dblabs-api;dblabs-api";
 
 message AlterDatabaseRequest {
     string database_name = 1;

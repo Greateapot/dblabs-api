@@ -6,7 +6,7 @@ import "data_type.proto";
 import "enums.proto";
 import "any.proto"; // google.protobuf.Any
 
-option go_package = "greateapot.re/dblabs-api";
+option go_package = "greateapot.re/dblabs-api;dblabs-api";
 
 message As {
     string name = 1;

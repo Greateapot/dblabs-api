@@ -5,7 +5,7 @@ package greateapot.dblabs_api;
 import "requests.proto";
 import "responses.proto";
 
-option go_package = "greateapot.re/dblabs-api";
+option go_package = "greateapot.re/dblabs-api;dblabs-api";
 
 service Api {
     rpc AlterDatabase(AlterDatabaseRequest) returns (OkResponse);

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package greateapot.dblabs_api;
 
-option go_package = "greateapot.re/dblabs-api";
+option go_package = "greateapot.re/dblabs-api;dblabs-api";
 
 enum ReadOnly {
     ENABLED = 0;

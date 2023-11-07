@@ -4,7 +4,7 @@ package greateapot.dblabs_api;
 
 import "error.proto";
 
-option go_package = "greateapot.re/dblabs-api";
+option go_package = "greateapot.re/dblabs-api;dblabs-api";
 
 message OkResponse {
     bool ok = 1;
