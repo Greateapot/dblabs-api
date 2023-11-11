@@ -4,7 +4,7 @@ package greateapot.dblabs_api;
 
 import "enums.proto";
 
-option go_package = "greateapot.re/dblabs-api;dblabs-api";
+option go_package = "greateapot.re/dblabs-api;dblabs_api";
 
 message DataType {
     DataTypeType type = 1;

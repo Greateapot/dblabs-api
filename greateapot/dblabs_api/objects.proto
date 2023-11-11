@@ -6,7 +6,7 @@ import "data_type.proto";
 import "enums.proto";
 import "any.proto"; // google.protobuf.Any
 
-option go_package = "greateapot.re/dblabs-api;dblabs-api";
+option go_package = "greateapot.re/dblabs-api;dblabs_api";
 
 message As {
     string name = 1;
@@ -152,4 +152,9 @@ message SelectData {
 message OrderBy {
     string expr = 1;
     bool order_by_descending = 2;
+}
+
+message TriggerOrder {
+    TriggerOrderType type = 1;
+    string other_trigger_name = 2;
 }

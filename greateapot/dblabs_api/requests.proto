@@ -6,7 +6,7 @@ import "objects.proto";
 import "options.proto";
 import "enums.proto";
 
-option go_package = "greateapot.re/dblabs-api;dblabs-api";
+option go_package = "greateapot.re/dblabs-api;dblabs_api";
 
 message AlterDatabaseRequest {
     string database_name = 1;
@@ -30,10 +30,6 @@ message CreateTableRequest {
 message DropTableRequest {
     string table_name = 1;
 }
-
-// message AlterViewRequest {}
-// message CreateViewRequest {}
-// message DropViewRequest {}
 
 message RenameTableRequest {
     string old_table_name = 1;
@@ -89,7 +85,7 @@ message InsertRequest {
 
 message ShowDatabasesRequest {
     // default: true
-    bool show_sys = 1; 
+    bool show_sys = 1;
 }
 
 message ShowTablesRequest {
@@ -101,3 +97,15 @@ message ShowTableStructRequest {
     string table_name = 2;
 }
 
+message CreateTriggerRequest {
+    string trigger_name = 1;
+    TriggerTimeType trigger_time = 2;
+    TriggerEventType trigger_event = 3;
+    string table_name = 4;
+    TriggerOrder trigger_order = 5;
+    string trigger_body = 6;
+}
+
+message DropTriggerRequest {
+    string trigger_name = 1;
+}

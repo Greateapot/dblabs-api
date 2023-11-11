@@ -5,7 +5,7 @@ package greateapot.dblabs_api;
 import "objects.proto";
 import "enums.proto";
 
-option go_package = "greateapot.re/dblabs-api;dblabs-api";
+option go_package = "greateapot.re/dblabs-api;dblabs_api";
 
 message CreateTableOption {
     CreateTableOptionType type = 1;

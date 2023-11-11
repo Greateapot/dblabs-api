@@ -5,7 +5,7 @@ package greateapot.dblabs_api;
 import "requests.proto";
 import "responses.proto";
 
-option go_package = "greateapot.re/dblabs-api;dblabs-api";
+option go_package = "greateapot.re/dblabs-api;dblabs_api";
 
 service Api {
     rpc AlterDatabase(AlterDatabaseRequest) returns (OkResponse);
@@ -26,4 +26,7 @@ service Api {
     rpc ShowDatabases(ShowDatabasesRequest) returns (TableResponse);
     rpc ShowTables(ShowTablesRequest) returns (TableResponse);
     rpc ShowTableStruct(ShowTableStructRequest) returns (TableResponse);
+
+    rpc CreateTrigger(CreateTriggerRequest) returns (OkResponse);
+    rpc DropTrigger(DropTriggerRequest) returns (OkResponse);
 }

@@ -2,7 +2,23 @@ syntax = "proto3";
 
 package greateapot.dblabs_api;
 
-option go_package = "greateapot.re/dblabs-api;dblabs-api";
+option go_package = "greateapot.re/dblabs-api;dblabs_api";
+
+enum TriggerTimeType {
+    BEFORE_EVENT = 0;
+    AFTER_EVENT = 1;
+}
+
+enum TriggerEventType {
+    INSERT = 0;
+    UPDATE = 1;
+    DELETE = 2;
+}
+
+enum TriggerOrderType {
+    FOLLOWS = 0;
+    PRECEDES = 1;
+}
 
 enum ReadOnly {
     ENABLED = 0;
