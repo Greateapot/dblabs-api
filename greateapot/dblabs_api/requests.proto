@@ -109,3 +109,24 @@ message CreateTriggerRequest {
 message DropTriggerRequest {
     string trigger_name = 1;
 }
+
+message DropViewRequest {
+    string view_name = 1;
+}
+
+message CreateViewRequest {
+    string view_name = 1;
+    repeated string column_list = 2;
+    SelectData select_data = 3;
+    ViewAlgorithmType algorithm = 4;
+    ViewWithCheckOptionType with_check_option = 5;
+    bool or_replace = 6;
+}
+
+message AlterViewRequest {
+    string view_name = 1;
+    repeated string column_list = 2;
+    SelectData select_data = 3;
+    ViewAlgorithmType algorithm = 4;
+    ViewWithCheckOptionType with_check_option = 5;
+}

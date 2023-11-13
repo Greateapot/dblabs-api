@@ -29,4 +29,8 @@ service Api {
 
     rpc CreateTrigger(CreateTriggerRequest) returns (OkResponse);
     rpc DropTrigger(DropTriggerRequest) returns (OkResponse);
+
+    rpc AlterView(AlterViewRequest) returns (OkResponse);
+    rpc CreateView(CreateViewRequest) returns (OkResponse);
+    rpc DropView(DropViewRequest) returns (OkResponse);
 }

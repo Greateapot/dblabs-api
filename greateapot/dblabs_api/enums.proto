@@ -4,6 +4,17 @@ package greateapot.dblabs_api;
 
 option go_package = "greateapot.re/dblabs-api;dblabs_api";
 
+enum ViewAlgorithmType {
+    UNDEFINED = 0;
+    MERGE = 1;
+    TEMPTABLE = 2;
+}
+
+enum ViewWithCheckOptionType {
+    CASCADED = 0;
+    LOCAL = 1;
+}
+
 enum TriggerTimeType {
     BEFORE_EVENT = 0;
     AFTER_EVENT = 1;
