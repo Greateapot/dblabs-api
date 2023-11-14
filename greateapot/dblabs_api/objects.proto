@@ -8,6 +8,12 @@ import "any.proto"; // google.protobuf.Any
 
 option go_package = "greateapot.re/dblabs-api;dblabs_api";
 
+message ProcedureParameter {
+    ProcedureParameterType type = 1;
+    string param_name = 2;
+    DataType data_type = 3;
+}
+
 message As {
     string name = 1;
 }

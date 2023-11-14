@@ -17,6 +17,7 @@ service Api {
     rpc RenameTable(RenameTableRequest) returns (OkResponse);
     rpc TruncateTable(TruncateTableRequest) returns (OkResponse);
 
+    rpc Set(SetRequest) returns (OkResponse);
     rpc Delete(DeleteRequest) returns (OkResponse);
     rpc Update(UpdateRequest) returns (OkResponse);
     rpc Insert(InsertRequest) returns (OkResponse);
@@ -33,4 +34,8 @@ service Api {
     rpc AlterView(AlterViewRequest) returns (OkResponse);
     rpc CreateView(CreateViewRequest) returns (OkResponse);
     rpc DropView(DropViewRequest) returns (OkResponse);
+
+    rpc CreateProcedure(CreateProcedureRequest) returns (OkResponse);
+    rpc DropProcedure(DropProcedureRequest) returns (OkResponse);
+    rpc CallProcedure(CallProcedureRequest) returns (OkResponse);
 }

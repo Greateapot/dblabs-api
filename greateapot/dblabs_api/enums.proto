@@ -4,6 +4,12 @@ package greateapot.dblabs_api;
 
 option go_package = "greateapot.re/dblabs-api;dblabs_api";
 
+enum ProcedureParameterType {
+    IN = 0;
+    OUT = 1;
+    INOUT = 2;
+}
+
 enum ViewAlgorithmType {
     UNDEFINED = 0;
     MERGE = 1;
